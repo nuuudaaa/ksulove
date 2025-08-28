@@ -191,7 +191,7 @@ export default function App() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1.2, ease: "backOut" }}
         style={{
-          padding: '2rem 3rem',
+          padding: '1.5rem 2rem',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
@@ -202,13 +202,13 @@ export default function App() {
           boxShadow: isDarkMode
             ? '0 15px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(168, 85, 247, 0.4), inset 0 1px 0 rgba(255,255,255,0.1)'
             : '0 15px 50px rgba(0, 0, 0, 0.25), 0 0 30px rgba(236, 72, 153, 0.3), inset 0 1px 0 rgba(255,255,255,0.9)',
-          borderRadius: '2.5rem',
-          margin: '2rem auto',
+          borderRadius: '1.5rem',
+          margin: '1rem auto',
           maxWidth: '96%',
           border: isDarkMode ? '2px solid rgba(168, 85, 247, 0.4)' : '2px solid rgba(236, 72, 153, 0.4)',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.2rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <motion.div
             animate={{
               rotate: [0, 15, -15, 0],
@@ -224,15 +224,15 @@ export default function App() {
             <Heart
               style={{
                 color: '#ec4899',
-                width: '50px',
-                height: '50px',
+                width: '40px',
+                height: '40px',
                 filter: 'drop-shadow(0 0 20px rgba(236, 72, 153, 1))',
               }}
             />
           </motion.div>
           <motion.strong
             style={{
-              fontSize: '3rem',
+              fontSize: '2.2rem',
               fontWeight: '900',
               background: 'linear-gradient(135deg, #ec4899, #a855f7, #3b82f6, #10b981, #ec4899)',
               backgroundSize: '400% 400%',
@@ -255,13 +255,13 @@ export default function App() {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-            style={{ marginLeft: '1rem' }}
+            style={{ marginLeft: '0.5rem' }}
           >
-            <Sparkles style={{ color: '#fbbf24', width: '24px', height: '24px' }} />
+            <Sparkles style={{ color: '#fbbf24', width: '20px', height: '20px' }} />
           </motion.div>
         </div>
         
-        <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
           <motion.div
             animate={{ 
               scale: [1, 1.2, 1],
@@ -275,8 +275,8 @@ export default function App() {
           >
             <Cherry style={{ 
               color: isDarkMode ? '#f87171' : '#dc2626', 
-              width: '28px', 
-              height: '28px' 
+              width: '24px', 
+              height: '24px' 
             }} />
           </motion.div>
           
@@ -288,7 +288,7 @@ export default function App() {
               background: 'none',
               border: 'none',
               cursor: 'pointer',
-              padding: '1.2rem',
+              padding: '0.8rem',
               borderRadius: '50%',
               display: 'flex',
               alignItems: 'center',
@@ -296,14 +296,17 @@ export default function App() {
               backgroundColor: isDarkMode ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.2)',
               backdropFilter: 'blur(15px)',
               boxShadow: isDarkMode 
-                ? '0 8px 25px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2)'
-                : '0 8px 25px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.8)',
+                ? '0 6px 15px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2)'
+                : '0 6px 15px rgba(0,0,0,0.15), inset 0 1px 0 rgba(255,255,255,0.8)',
+              minWidth: '44px',
+              minHeight: '44px',
             }}
+            aria-label="Toggle dark mode"
           >
             {isDarkMode ? (
-              <Sun style={{ color: '#fbbf24', width: '32px', height: '32px' }} />
+              <Sun style={{ color: '#fbbf24', width: '24px', height: '24px' }} />
             ) : (
-              <Moon style={{ color: '#475569', width: '32px', height: '32px' }} />
+              <Moon style={{ color: '#475569', width: '24px', height: '24px' }} />
             )}
           </motion.button>
         </div>
@@ -312,7 +315,7 @@ export default function App() {
       {/* Main */}
       <main
         style={{
-          padding: '3rem',
+          padding: '2rem',
           textAlign: 'center',
           maxWidth: '1100px',
           margin: '0 auto',
@@ -329,22 +332,22 @@ export default function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.4 }}
           style={{
-            marginBottom: '4rem',
-            marginTop: '6rem',
+            marginBottom: '3rem',
+            marginTop: '4rem',
           }}
         >
           <motion.h1
             style={{
-              fontSize: 'clamp(3.5rem, 10vw, 8.5rem)',
+              fontSize: 'clamp(2.5rem, 8vw, 6rem)',
               fontWeight: '900',
-              margin: '0 0 2rem 0',
+              margin: '0 0 1.5rem 0',
               lineHeight: 1.02,
               background: 'linear-gradient(135deg, #ec4899, #a855f7, #3b82f6, #10b981, #fbbf24, #ec4899)',
-              backgroundSize: '500% 500%',
+              backgroundSize: '400% 400%',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               letterSpacing: '-0.04em',
-              textShadow: isDarkMode ? '0 0 40px rgba(236, 72, 153, 0.5)' : '0 0 40px rgba(236, 72, 153, 0.3)',
+              textShadow: isDarkMode ? '0 0 30px rgba(236, 72, 153, 0.5)' : '0 0 30px rgba(236, 72, 153, 0.3)',
             }}
             animate={{
               backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
@@ -360,12 +363,12 @@ export default function App() {
           
           <motion.div
             initial={{ width: 0 }}
-            animate={{ width: '300px' }}
+            animate={{ width: '200px' }}
             transition={{ delay: 1, duration: 1.5, ease: "easeOut" }}
             style={{
-              height: '4px',
+              height: '3px',
               background: 'linear-gradient(90deg, transparent, #ec4899, #a855f7, #ec4899, transparent)',
-              margin: '0 auto 2rem',
+              margin: '0 auto 1.5rem',
               borderRadius: '2px',
             }}
           />
@@ -375,11 +378,11 @@ export default function App() {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 1.2 }}
             style={{
-              fontSize: '1.8rem',
+              fontSize: '1.4rem',
               color: isDarkMode ? '#e2e8f0' : '#475569',
               maxWidth: '850px',
               margin: '0 auto',
-              lineHeight: '1.9',
+              lineHeight: '1.7',
               fontWeight: '400',
             }}
           >
@@ -397,7 +400,7 @@ export default function App() {
           style={{
             display: 'inline-block',
             cursor: 'pointer',
-            margin: '5rem 0 7rem 0',
+            margin: '3rem 0 5rem 0',
             position: 'relative',
           }}
         >
@@ -407,10 +410,10 @@ export default function App() {
               key={i}
               style={{
                 position: 'absolute',
-                inset: -80 - i * 20,
+                inset: -60 - i * 15,
                 background: `radial-gradient(circle, rgba(236, 72, 153, ${0.3 - i * 0.1}), rgba(168, 85, 247, ${0.2 - i * 0.05}), transparent 70%)`,
                 borderRadius: '50%',
-                filter: `blur(${50 + i * 20}px)`,
+                filter: `blur(${40 + i * 15}px)`,
                 zIndex: -1 - i,
               }}
               animate={{
@@ -433,15 +436,15 @@ export default function App() {
               key={i}
               style={{
                 position: 'absolute',
-                width: '20px',
-                height: '20px',
+                width: '16px',
+                height: '16px',
                 left: '50%',
                 top: '50%',
               }}
               animate={{
                 rotate: [0, 360],
-                x: Math.cos(i * 60 * Math.PI / 180) * 120,
-                y: Math.sin(i * 60 * Math.PI / 180) * 120,
+                x: Math.cos(i * 60 * Math.PI / 180) * 100,
+                y: Math.sin(i * 60 * Math.PI / 180) * 100,
               }}
               transition={{
                 duration: 8,
@@ -464,11 +467,11 @@ export default function App() {
           
           <Heart
             style={{
-              width: '200px',
-              height: '200px',
+              width: '160px',
+              height: '160px',
               color: '#ec4899',
               fill: '#ec4899',
-              filter: 'drop-shadow(0 30px 50px rgba(236, 72, 153, 0.7))',
+              filter: 'drop-shadow(0 20px 40px rgba(236, 72, 153, 0.7))',
               position: 'relative',
               zIndex: 1,
             }}
@@ -483,13 +486,13 @@ export default function App() {
             background: isDarkMode
               ? 'rgba(255, 255, 255, 0.1)'
               : 'rgba(255, 255, 255, 0.98)',
-            padding: '5rem',
-            borderRadius: '2.5rem',
+            padding: '3rem',
+            borderRadius: '2rem',
             maxWidth: '800px',
-            margin: '5rem auto 0',
+            margin: '3rem auto 0',
             boxShadow: isDarkMode
-              ? '0 40px 80px rgba(0, 0, 0, 0.8), 0 0 60px rgba(236, 72, 153, 0.4), inset 0 2px 0 rgba(255,255,255,0.15), inset 0 -2px 0 rgba(0,0,0,0.1)'
-              : '0 40px 80px rgba(0, 0, 0, 0.2), 0 0 60px rgba(236, 72, 153, 0.25), inset 0 2px 0 rgba(255,255,255,1), inset 0 -2px 0 rgba(0,0,0,0.05)',
+              ? '0 30px 60px rgba(0, 0, 0, 0.8), 0 0 60px rgba(236, 72, 153, 0.4), inset 0 2px 0 rgba(255,255,255,0.15), inset 0 -2px 0 rgba(0,0,0,0.1)'
+              : '0 30px 60px rgba(0, 0, 0, 0.2), 0 0 60px rgba(236, 72, 153, 0.25), inset 0 2px 0 rgba(255,255,255,1), inset 0 -2px 0 rgba(0,0,0,0.05)',
             backdropFilter: 'blur(25px)',
             border: isDarkMode
               ? '2px solid rgba(255, 255, 255, 0.25)'
@@ -505,14 +508,14 @@ export default function App() {
             transition={{ delay: 1.2, duration: 1, ease: "backOut" }}
             style={{
               position: 'absolute',
-              top: '30px',
-              right: '40px',
-              width: '60px',
-              height: '15px',
+              top: '20px',
+              right: '30px',
+              width: '50px',
+              height: '12px',
               background: 'linear-gradient(90deg, #d97706, #92400e, #451a03)',
-              borderRadius: '8px',
+              borderRadius: '6px',
               zIndex: 2,
-              boxShadow: '0 6px 12px rgba(0,0,0,0.4)',
+              boxShadow: '0 4px 8px rgba(0,0,0,0.4)',
             }}
           />
           
@@ -523,11 +526,11 @@ export default function App() {
             transition={{ delay: 1, duration: 0.8, ease: "backOut" }}
             style={{
               position: 'absolute',
-              top: '25px',
-              left: '30px',
+              top: '20px',
+              left: '25px',
             }}
           >
-            <Flower2 style={{ width: '35px', height: '35px', color: '#ec4899' }} />
+            <Flower2 style={{ width: '30px', height: '30px', color: '#ec4899' }} />
           </motion.div>
           
           <motion.div
@@ -538,9 +541,9 @@ export default function App() {
             <Sparkles
               style={{
                 color: '#fbbf24',
-                margin: '0 auto 2.5rem',
-                width: '60px',
-                height: '60px',
+                margin: '0 auto 1.5rem',
+                width: '50px',
+                height: '50px',
                 filter: 'drop-shadow(0 0 15px #fbbf24)',
               }}
             />
@@ -549,9 +552,9 @@ export default function App() {
           {/* Текст письма */}
           <div
             style={{
-              lineHeight: '2.4',
+              lineHeight: '2.2',
               color: isDarkMode ? '#f8fafc' : '#0f172a',
-              fontSize: '1.35rem',
+              fontSize: '1.2rem',
               textAlign: 'left',
               fontWeight: '400',
               whiteSpace: 'pre-line',
@@ -566,17 +569,17 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 3, duration: 1 }}
             style={{
-              marginTop: '3rem',
+              marginTop: '2rem',
               display: 'flex',
               justifyContent: 'center',
-              gap: '1rem',
+              gap: '0.8rem',
             }}
           >
             {[Heart, Star, Flower].map((Icon, i) => (
               <motion.div
                 key={i}
                 animate={{ 
-                  y: [0, -10, 0],
+                  y: [0, -8, 0],
                   rotate: [0, 10, -10, 0] 
                 }}
                 transition={{ 
@@ -588,8 +591,8 @@ export default function App() {
               >
                 <Icon 
                   style={{ 
-                    width: '30px', 
-                    height: '30px',
+                    width: '24px', 
+                    height: '24px',
                     color: ['#ec4899', '#a855f7', '#10b981'][i],
                     fill: i === 0 ? 'currentColor' : 'none'
                   }} 
@@ -605,18 +608,18 @@ export default function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.5, duration: 1.5 }}
           style={{
-            marginTop: '10rem',
-            marginBottom: '4rem',
+            marginTop: '8rem',
+            marginBottom: '3rem',
             textAlign: 'center',
           }}
         >
           <motion.p
             style={{
-              fontSize: '1.5rem',
+              fontSize: '1.2rem',
               color: isDarkMode ? '#cbd5e1' : '#64748b',
               fontStyle: 'italic',
               fontWeight: '500',
-              marginBottom: '2rem',
+              marginBottom: '1.5rem',
             }}
             animate={{
               textShadow: [
@@ -635,14 +638,14 @@ export default function App() {
           </motion.p>
           
           {/* Красивая декоративная линия из сердечек */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginTop: '2rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginTop: '1rem' }}>
             {[...Array(7)].map((_, i) => (
               <motion.div
                 key={i}
                 animate={{ 
-                  scale: [1, 1.5, 1],
+                  scale: [1, 1.3, 1],
                   rotate: [0, 360],
-                  y: [0, -15, 0]
+                  y: [0, -12, 0]
                 }}
                 transition={{ 
                   duration: 2 + i * 0.2, 
@@ -653,8 +656,8 @@ export default function App() {
               >
                 <Heart
                   style={{
-                    width: `${20 + Math.sin(i) * 8}px`,
-                    height: `${20 + Math.sin(i) * 8}px`,
+                    width: '16px',
+                    height: '16px',
                     color: ['#ec4899', '#a855f7', '#fbbf24', '#10b981', '#3b82f6'][i % 5],
                     fill: 'currentColor',
                     filter: 'drop-shadow(0 0 8px currentColor)',
@@ -670,10 +673,10 @@ export default function App() {
             animate={{ opacity: 1 }}
             transition={{ delay: 4, duration: 2 }}
             style={{
-              fontSize: '1.2rem',
+              fontSize: '1rem',
               color: isDarkMode ? '#a1a1aa' : '#71717a',
               fontStyle: 'italic',
-              marginTop: '3rem',
+              marginTop: '2rem',
               fontWeight: '300',
             }}
           >
@@ -688,10 +691,10 @@ export default function App() {
           key={i}
           style={{
             position: 'fixed',
-            [i < 2 ? 'top' : 'bottom']: '20px',
-            [i % 2 === 0 ? 'left' : 'right']: '20px',
-            width: '50px',
-            height: '50px',
+            [i < 2 ? 'top' : 'bottom']: '15px',
+            [i % 2 === 0 ? 'left' : 'right']: '15px',
+            width: '40px',
+            height: '40px',
             zIndex: 5,
           }}
           animate={{
